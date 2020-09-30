@@ -9,5 +9,5 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
       with:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}
+        host: ${{ https://sonar.asian-technology.com/ }}
+        login: ${{ 3bb754de3237f363802b97123bed1a219c7b2e41 }}
