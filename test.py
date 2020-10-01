@@ -1,6 +1,6 @@
 """
 This module contains shared fixtures for web UI tests.
-s for web UI tests something.
+
 """
 
 import json
