@@ -29,6 +29,8 @@ jobs:
 
       - name: Run an analysis of the PR
         env:
+          GIT_TRACE: 1
+          GIT_CURL_VERBOSE: 1
           # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sonar-scanner
