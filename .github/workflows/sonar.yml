@@ -1,6 +1,5 @@
  Start by giving a name to your workflow
-name: Analyzebranch
-
+ name: Analyzebranch
 # then define on which event, here a push
 on:
   push:
