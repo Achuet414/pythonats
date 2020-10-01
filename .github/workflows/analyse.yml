@@ -16,7 +16,8 @@ jobs:
 
     steps:
       - name: Setup sonarqube
-        uses: warchant/setup-sonar-scanner@v1
+        #uses: warchant/setup-sonar-scanner@v1
+        uses: mc1arke/sonarqube-community-branch-plugin
 
       - name: 'Checkout repository on branch: ${{ github.REF }}'
         uses: actions/checkout@v2
