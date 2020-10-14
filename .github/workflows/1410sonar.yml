@@ -10,6 +10,7 @@ jobs:
       uses: kitabisa/sonarqube-action@master
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
+        projectKey: "my-custom-project"
         login: ${{ secrets.SONARQUBE_TOKEN }}
         
     
