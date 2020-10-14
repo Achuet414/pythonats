@@ -19,7 +19,7 @@ jobs:
     steps:
       # Use an existing action, you can look in the market place to find what you need and how to use it, to setup the sonar scanner
       - name: Setup sonar scanner
-        uses: warchant/setup-sonar-scanner@v1
+        uses: warchant/setup-sonar-scanner@v3
 
       # Another existing action, this one to checkout the repository
       - name: 'Checkout repository on branch: ${{ github.REF }}'
@@ -31,9 +31,9 @@ jobs:
       # Conditional execution can be done, in this case the parameter to use with sonar scanner are different if we are analyzing master or a branch
       - if: endsWith(github.REF, '/master') != true
         name: 'Run an analysis of the ${{ github.REF }} branch'
-        env:
+       # env:
           # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sonar-scanner
           -Dsonar.host.url=${{ secrets.SONAR_URL }}
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
