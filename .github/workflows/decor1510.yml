@@ -17,7 +17,7 @@ jobs:
            env:
                 # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
                GITHUB_TOKEN: ${{ secrets.GIT_ACTION_1410 }}
-           run: sonar-scanner - X
+           run: sonar-scanner -X
             -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
             -Dsonar.organization=default
             -Dsonar.host.url=https://sonar.asian-technology.com/
