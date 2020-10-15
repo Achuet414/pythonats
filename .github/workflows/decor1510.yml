@@ -19,6 +19,5 @@ jobs:
                GITHUB_TOKEN: ${{ secrets.GIT_ACTION_1410 }}
            run: sonar-scanner
             -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
-            -Dsonar.organization=achuet
             -Dsonar.host.url=https://sonar.asian-technology.com/
             -Dsonar.projectKey=sonar-scanner-action
